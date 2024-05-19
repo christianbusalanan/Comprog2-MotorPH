@@ -85,7 +85,7 @@ public class Portal extends JFrame {
         
         JPanel panel_1 = new JPanel();
         panel_1.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
-        panel_1.setBounds(249, 77, 286, 306);
+        panel_1.setBounds(249, 82, 286, 297);
         panel.add(panel_1);
         panel_1.setBackground(new Color(255, 255, 255));
         panel_1.setLayout(null);
@@ -100,6 +100,7 @@ public class Portal extends JFrame {
         panel_1.add(passwordField);
         
         JButton btnNewButton = new JButton("Login");
+        btnNewButton.setFont(new Font("SansSerif", Font.PLAIN, 11));
         btnNewButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         	}
@@ -108,16 +109,18 @@ public class Portal extends JFrame {
         panel_1.add(btnNewButton);
         
         JLabel lblNewLabel_1 = new JLabel("Username");
-        lblNewLabel_1.setBounds(23, 73, 65, 14);
+        lblNewLabel_1.setFont(new Font("SansSerif", Font.PLAIN, 11));
+        lblNewLabel_1.setBounds(23, 73, 50, 14);
         panel_1.add(lblNewLabel_1);
         
         JLabel lblNewLabel_1_1 = new JLabel("Password");
-        lblNewLabel_1_1.setBounds(23, 150, 65, 14);
+        lblNewLabel_1_1.setFont(new Font("SansSerif", Font.PLAIN, 11));
+        lblNewLabel_1_1.setBounds(23, 150, 50, 14);
         panel_1.add(lblNewLabel_1_1);
         
         JLabel lblNewLabel_2 = new JLabel("Welcome to MotorPH");
-        lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 15));
-        lblNewLabel_2.setBounds(66, 47, 156, 20);
+        lblNewLabel_2.setFont(new Font("SansSerif", Font.BOLD, 15));
+        lblNewLabel_2.setBounds(68, 46, 149, 20);
         panel_1.add(lblNewLabel_2);
         
         JLabel lblNewLabel = new JLabel("New label");
