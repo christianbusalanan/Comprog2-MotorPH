@@ -35,26 +35,22 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JToggleButton;
 
-public class Portal extends JFrame {
+public class Register extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JPasswordField passwordField;
+	private JPasswordField passwordField_1;
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Portal frame = new Portal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	public Portal() {
+	/**
+	 * Launch the application.
+	 */
+
+	/**
+	 * Create the frame.
+	 */
+	public Register() {
 		setTitle("MotorPH");
 		setResizable(false);
 		JFrame frame= new JFrame();
@@ -81,7 +77,7 @@ public class Portal extends JFrame {
         
         JPanel panel_1 = new JPanel();
         panel_1.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
-        panel_1.setBounds(249, 82, 286, 277);
+        panel_1.setBounds(249, 73, 286, 325);
         panel.add(panel_1);
         panel_1.setBackground(new Color(255, 255, 255));
         panel_1.setLayout(null);
@@ -95,41 +91,46 @@ public class Portal extends JFrame {
         passwordField.setBounds(23, 128, 242, 29);
         panel_1.add(passwordField);
         
-        JButton btnNewButton = new JButton("Login");
-        btnNewButton.setFont(new Font("SansSerif", Font.PLAIN, 11));
-        btnNewButton.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        	}
-        });
-        btnNewButton.setBounds(90, 179, 106, 29);
-        panel_1.add(btnNewButton);
-        
-        JLabel lblNewLabel_1 = new JLabel("Username");
+        JLabel lblNewLabel_1 = new JLabel("Set Username");
         lblNewLabel_1.setFont(new Font("SansSerif", Font.PLAIN, 11));
-        lblNewLabel_1.setBounds(23, 56, 50, 14);
+        lblNewLabel_1.setBounds(23, 56, 80, 14);
         panel_1.add(lblNewLabel_1);
         
-        JLabel lblNewLabel_1_1 = new JLabel("Password");
+        JLabel lblNewLabel_1_1 = new JLabel("Set Password");
         lblNewLabel_1_1.setFont(new Font("SansSerif", Font.PLAIN, 11));
-        lblNewLabel_1_1.setBounds(23, 114, 50, 14);
+        lblNewLabel_1_1.setBounds(23, 114, 80, 14);
         panel_1.add(lblNewLabel_1_1);
         
-        JLabel lblNewLabel_2 = new JLabel("Welcome to MotorPH");
+        JLabel lblNewLabel_2 = new JLabel("Register");
         lblNewLabel_2.setFont(new Font("SansSerif", Font.BOLD, 15));
-        lblNewLabel_2.setBounds(67, 25, 149, 20);
+        lblNewLabel_2.setBounds(110, 25, 66, 20);
         panel_1.add(lblNewLabel_2);
         
         JToggleButton btnRegister = new JToggleButton("Register");
-        btnRegister.addActionListener(new ActionListener() {
+        btnRegister.setFont(new Font("SansSerif", Font.PLAIN, 11));
+        btnRegister.setBounds(88, 229, 106, 29);
+        panel_1.add(btnRegister);
+        
+        JLabel lblNewLabel_1_1_1 = new JLabel("Set Password");
+        lblNewLabel_1_1_1.setFont(new Font("SansSerif", Font.PLAIN, 11));
+        lblNewLabel_1_1_1.setBounds(23, 168, 80, 14);
+        panel_1.add(lblNewLabel_1_1_1);
+        
+        passwordField_1 = new JPasswordField();
+        passwordField_1.setBounds(23, 182, 242, 29);
+        panel_1.add(passwordField_1);
+        
+        JToggleButton tglbtnBackToLogin = new JToggleButton("Back to Login");
+        tglbtnBackToLogin.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		dispose();
-        		Register register= new Register();
-        		register.setVisible(true);
+        		Portal portal= new Portal();
+        		portal.setVisible(true);
         	}
         });
-        btnRegister.setFont(new Font("SansSerif", Font.PLAIN, 11));
-        btnRegister.setBounds(90, 219, 106, 29);
-        panel_1.add(btnRegister);
+        tglbtnBackToLogin.setFont(new Font("SansSerif", Font.PLAIN, 11));
+        tglbtnBackToLogin.setBounds(88, 269, 106, 29);
+        panel_1.add(tglbtnBackToLogin);
         
         JLabel lblNewLabel = new JLabel("New label");
         lblNewLabel.setBounds(0, 0, 784, 461);
